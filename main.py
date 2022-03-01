@@ -1,9 +1,7 @@
 import numpy
 import re
 from collections import OrderedDict
-# coding=utf-8
-# This is a sample Python script.
-OPERANDS = OrderedDict({'*': numpy.multiply, '/': numpy.divide, '+': numpy.add, '-': numpy.subtract})
+OPERANDS = OrderedDict({'^': numpy.power, '*': numpy.multiply, '/': numpy.divide, '+': numpy.add, '-': numpy.subtract})
 
 
 class Calculator:
@@ -37,12 +35,10 @@ class Calculator:
 
 
 def main():
-    original_expression = raw_input('Welcome, please enter expression to solve:\n')
+    original_expression = input('Welcome, please enter expression to solve:\n')
     expression = Calculator(original_expression)
     expression.solve()
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     main()
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
