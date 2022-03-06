@@ -15,29 +15,28 @@ class Calculator:
         Using the regex split function - splits our expression to a list of numbers and operators
         """
         self.expression = re.split(r'(\D)', self.expression.replace(" ", "").replace(":", "/"))
-        print(self.expression)
 
     def convert_numbers(self):
         self.expression = [float(item) if item.isalnum() else item for item in self.expression]
-        print(self.expression)
 
     def solve(self):
         for operand, value in OPERANDS.items():
-            print(operand)
-            # if operand in self.expression:
-            #     operand_position = self.expression.index(operand)
-            #     print(str(value(5, 6)))
-            #     print(operand)
-            #     self.expression[operand_position - 1] = value(self.expression.pop(operand_position - 1), self.expression.pop(operand_position))
-            #     print self.expression
-
+            # print(operand)
+            while operand in self.expression:
+                operand_position = self.expression.index(operand)
+                # print(operand + '=?' + self.expression[operand_position])
+                # print("to replace" + str(self.expression[operand_position - 1: operand_position + 2]))
+                result = [value(self.expression[operand_position - 1], self.expression[operand_position+1])]
+                self.expression[operand_position - 1: operand_position + 2] = result
+                # print(self.expression)
         return self.expression
 
 
 def main():
-    original_expression = input('Welcome, please enter expression to solve:\n')
-    expression = Calculator(original_expression)
-    expression.solve()
+    while True:
+        original_expression = input('Welcome, please enter expression to solve:\n')
+        expression = Calculator(original_expression)
+        print(str(expression.solve()))
 
 
 if __name__ == '__main__':
