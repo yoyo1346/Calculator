@@ -1,0 +1,85 @@
+{
+  "parentheses": {
+    "opening": "[",
+    "closing": "]"
+  },
+  "operators":[
+     {
+       "sign": "+",
+       "strength": 1,
+       "function_to_perform": "Arithmetics.addition",
+       "unary": false,
+       "operand_on_left": null
+     },
+     {
+       "sign": "-",
+       "strength": 1,
+       "function_to_perform": "Arithmetics.subtraction",
+       "unary": false,
+       "operand_on_left": null
+     },
+     {
+       "sign": "*",
+       "strength": 2,
+       "function_to_perform": "Arithmetics.multiply",
+       "unary": false,
+       "operand_on_left": null
+     },
+     {
+       "sign": "/",
+       "strength": 2,
+       "function_to_perform": "Arithmetics.divide",
+       "unary": false,
+       "operand_on_left": null
+     },
+     {
+       "sign": "^",
+       "strength": 3,
+       "function_to_perform": "Arithmetics.power",
+       "unary": false,
+       "operand_on_left": null
+     },
+     {
+       "sign": "%",
+       "strength": 4,
+       "function_to_perform": "Arithmetics.modulo",
+       "unary": false,
+       "operand_on_left": null
+     },
+     {
+       "sign": "!",
+       "strength": 4,
+       "function_to_perform": "Arithmetics.factorial",
+       "unary": true,
+       "operand_on_left": true
+     },
+     {
+       "sign": "@",
+       "strength": 5,
+       "function_to_perform": "Arithmetics.average",
+       "unary": false,
+       "operand_on_left": null
+     },
+     {
+       "sign": "$",
+       "strength": 5,
+       "function_to_perform": "max",
+       "unary": false,
+       "operand_on_left": null
+     },
+     {
+       "sign": "&",
+       "strength": 5,
+       "function_to_perform": "min",
+       "unary": false,
+       "operand_on_left": null
+     },
+     {
+       "sign": "~",
+       "strength": 5,
+       "function_to_perform": "Arithmetics.negative",
+       "unary": true,
+       "operand_on_left": false
+     }
+   ]
+}
